@@ -1,0 +1,57 @@
+version: '2.6.1'
+services:
+
+  #Nginx Service
+  webserver:
+    build: 
+      context: .
+      dockerfile: docker/nginx/Dockerfile
+    volumes:
+      - ./:/var/www/translater/projectyii
+      - ./logs/nginx:/var/log/nginx
+    ports:
+      - 80:80
+    networks:
+      - app-network
+
+  #FPM Service
+  php:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    volumes:
+      - ./:/var/www/translater/projectyii
+    networks:
+      - app-network
+    depends_on:
+      - mysql
+  
+
+  #MySQL Serveses
+  mysql:
+    image: mysql:5.7
+    restart: always
+    volumes:
+    - /etc/mysql:/etc/mysql
+    - ./logs/mysql:/var/log/mysql
+    - ./mysql:/var/lib/mysql
+    - ./mysql-files:/var/lib/mysql-files
+    - ./data:/docker-entrypoint-initdb.d
+    environment:
+    - MYSQL_ROOT_PASSWORD=root
+    - MYSQL_DATABASE=translater_db
+    - MYSQL_USER=Antoni
+    - MYSQL_PASSWORD=Golang13112!
+    ports:
+    - 33060:3306
+    networks:
+      - app-network
+      
+#Docker Networks
+networks:
+  app-network:
+     driver: bridge
+
+   
+     
+  

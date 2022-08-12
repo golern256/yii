@@ -1,0 +1,1911 @@
+2022/07/12 06:08:14 [error] 31#31: *3 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.31.0.1, server: translater.fun, request: "GET / HTTP/1.1", upstream: "fastcgi://172.31.0.2:9000", host: "translater.fun"
+2022/07/12 06:18:10 [error] 30#30: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: translater.fun, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "translater.fun"
+2022/07/12 06:18:12 [error] 30#30: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: translater.fun, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "translater.fun"
+2022/07/12 07:26:47 [error] 31#31: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.19.0.1, server: translater.fun, request: "GET / HTTP/1.1", upstream: "fastcgi://172.19.0.2:9000", host: "translater.fun"
+2022/07/12 07:26:49 [error] 31#31: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.19.0.1, server: translater.fun, request: "GET / HTTP/1.1", upstream: "fastcgi://172.19.0.2:9000", host: "translater.fun"
+2022/07/12 08:00:17 [error] 30#30: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.20.0.1, server: translater.fun, request: "GET / HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "translater.fun"
+2022/07/12 08:00:20 [error] 30#30: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.20.0.1, server: translater.fun, request: "GET / HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "translater.fun"
+2022/07/12 12:03:02 [error] 32#32: *3 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+yii\db\Exception: Failed to open redis DB connection (tcp://localhost:6379, database=0): 99 - Cannot assign requested address in /var/www/translater/projectyii/vendor/yiisoft/yii2-redis/src/Connection.php:658
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2-redis/src/Connection.php(759): yii\redis\Connection->open()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2-redis/src/Connection.php(724): yii\redis\Connection->executeCommand('EXISTS', Array)
+#2 /var/www/translater/projectyii/controllers/TranController.php(19): yii\redis\Connection->__call('exists', Array)
+#3 [internal function]: app\controllers\TranController->actionShow('Women')
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2" while reading upstream, client: 172.23.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=Women HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "translater.fun"
+2022/07/12 12:03:02 [error] 32#32: *3 FastCGI sent in stderr: "/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Cannot assign requested address
+$_SERVER = [
+    'HOSTNAME' => 'c6131d77558b',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '7.4.30',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-7.4.30.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-7.4.30.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PWD' => '/var/www/translater/projectyii',
+    'PHP_SHA256' => 'ea72a34f32c67e79ac2da7dfe96177f3c451c3eefae5810ba13312ed398ba70d',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'PHPSESSID=f62d88400dbe091e973cf8a6405ce242; _csrf=82c10c95dabc41ecfe26b85687fa1bc03e9e4898edc324bada35998c799b57eca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2200diDxgsfARgq2hGlOWXjWHgTVhuLqs8%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,ap
+2022/07/12 12:04:21 [error] 30#30: *12 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\base\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\Exception))
+#4 {main}
+Previous exception:
+yii\base\ErrorException: mkdir(): Permission denied in /var/www/translater/projectyii/vendor/yiisoft/yii2/helpers/BaseFileHelper.php:648
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'mkdir(): Permis...', '/var/www/transl...', 648, Array)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/helpers/BaseFileHelper.php(648): mkdir('/var/www/transl...', 509)
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/caching/FileCache.php(82): yii\helpers\BaseFileHelper::createDirectory('/var/www/transl...', 509, true)
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\caching\FileCache->init()
+#4 [internal function]: yii\base\BaseObject->__construct(Array)
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/di/Container.php(411): ReflectionClass->newInstanceArgs(Array)
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('yii\\caching\\Fil...', Array, Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('yii\\caching\\Fil...', Array, Array)
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject
+2022/07/12 12:04:21 [error] 30#30: *12 FastCGI sent in stderr: "projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#26 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#27 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#29 {main}
+
+Next yii\base\Exception: Failed to create directory "/var/www/translater/projectyii/runtime/cache": mkdir(): Permission denied in /var/www/translater/projectyii/vendor/yiisoft/yii2/helpers/BaseFileHelper.php:653
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/caching/FileCache.php(82): yii\helpers\BaseFileHelper::createDirectory('/var/www/transl...', 509, true)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\caching\FileCache->init()
+#2 [internal function]: yii\base\BaseObject->__construct(Array)
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/di/Container.php(411): ReflectionClass->newInstanceArgs(Array)
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('yii\\caching\\Fil...', Array, Array)
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('yii\\caching\\Fil...', Array, Array)
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject(Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(766): yii\di\ServiceLocator->get('cache', false)
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(399): yii\base\Module->get('cache', false)
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.
+2022/07/12 12:04:21 [error] 30#30: *12 FastCGI sent in stderr: "strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '7.4.30',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F75" while reading upstream, client: 172.23.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=Women HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "translater.fun"
+2022/07/12 12:09:09 [error] 32#32: *3 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\base\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\Exception))
+#4 {main}
+Previous exception:
+yii\base\ErrorException: mkdir(): Permission denied in /var/www/translater/projectyii/vendor/yiisoft/yii2/helpers/BaseFileHelper.php:648
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'mkdir(): Permis...', '/var/www/transl...', 648, Array)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/helpers/BaseFileHelper.php(648): mkdir('/var/www/transl...', 509)
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/caching/FileCache.php(82): yii\helpers\BaseFileHelper::createDirectory('/var/www/transl...', 509, true)
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\caching\FileCache->init()
+#4 [internal function]: yii\base\BaseObject->__construct(Array)
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/di/Container.php(411): ReflectionClass->newInstanceArgs(Array)
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('yii\\caching\\Fil...', Array, Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('yii\\caching\\Fil...', Array, Array)
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject(
+2022/07/12 12:09:09 [error] 32#32: *3 FastCGI sent in stderr: "projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#26 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#27 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#29 {main}
+
+Next yii\base\Exception: Failed to create directory "/var/www/translater/projectyii/runtime/cache": mkdir(): Permission denied in /var/www/translater/projectyii/vendor/yiisoft/yii2/helpers/BaseFileHelper.php:653
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/caching/FileCache.php(82): yii\helpers\BaseFileHelper::createDirectory('/var/www/transl...', 509, true)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\caching\FileCache->init()
+#2 [internal function]: yii\base\BaseObject->__construct(Array)
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/di/Container.php(411): ReflectionClass->newInstanceArgs(Array)
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('yii\\caching\\Fil...', Array, Array)
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('yii\\caching\\Fil...', Array, Array)
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject(Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(766): yii\di\ServiceLocator->get('cache', false)
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(399): yii\base\Module->get('cache', false)
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.p
+2022/07/12 12:09:09 [error] 32#32: *3 FastCGI sent in stderr: "strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '7.4.30',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F75" while reading upstream, client: 172.23.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=Women HTTP/1.1", upstream: "fastcgi://172.23.0.2:9000", host: "translater.fun"
+2022/07/12 12:09:32 [error] 32#32: *3 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\base\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\Exception))
+#4 {main}
+Previous exception:
+yii\base\ErrorException: mkdir(): Permission denied in /var/www/translater/projectyii/vendor/yiisoft/yii2/helpers/BaseFileHelper.php:648
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'mkdir(): Permis...', '/var/www/transl...', 648, Array)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/helpers/BaseFileHelper.php(648): mkdir('/var/www/transl...', 509)
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/caching/FileCache.php(82): yii\helpers\BaseFileHelper::createDirectory('/var/www/transl...', 509, true)
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\caching\FileCache->init()
+#4 [internal function]: yii\base\BaseObject->__construct(Array)
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/di/Container.php(411): ReflectionClass->newInstanceArgs(Array)
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('yii\\caching\\Fil...', Array, Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('yii\\caching\\Fil...', Array, Array)
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject(
+2022/07/12 12:09:32 [error] 32#32: *3 FastCGI sent in stderr: "ranslater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#26 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#27 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#29 {main}
+
+Next yii\base\Exception: Failed to create directory "/var/www/translater/projectyii/runtime/cache": mkdir(): Permission denied in /var/www/translater/projectyii/vendor/yiisoft/yii2/helpers/BaseFileHelper.php:653
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/caching/FileCache.php(82): yii\helpers\BaseFileHelper::createDirectory('/var/www/transl...', 509, true)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\caching\FileCache->init()
+#2 [internal function]: yii\base\BaseObject->__construct(Array)
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/di/Container.php(411): ReflectionClass->newInstanceArgs(Array)
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('yii\\caching\\Fil...', Array, Array)
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('yii\\caching\\Fil...', Array, Array)
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject(Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(766): yii\di\ServiceLocator->get('cache', false)
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(399): yii\base\Module->get('cache', false)
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Quer
+2022/07/12 12:09:32 [error] 32#32: *3 FastCGI sent in stderr: "k-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '7.4.30',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A5288078" while reading upstream, client: 172.23.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=present HTTP/1.1", upstream: "fastcgi://172.23.0.2:9000", host: "translater.fun"
+2022/07/12 14:09:06 [error] 32#32: *3 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=loca...', 'Antoni', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yi" while reading upstream, client: 172.23.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=women HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "translater.fun"
+2022/07/12 14:09:06 [error] 32#32: *3 FastCGI sent in stderr: "i\db\Connection->getMasterPdo()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#11 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /var/www/translater/projectyii/controllers/TranController.php(27): yii\db\ActiveQuery->all()
+#16 [internal function]: app\controllers\TranController->actionShow('Women')
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#20 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Ap
+2022/07/12 14:09:06 [error] 32#32: *3 FastCGI sent in stderr: "ii\db\ActiveQuery->all()
+#14 [internal function]: app\controllers\TranController->actionShow('Women')
+#15 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+$_SERVER = [
+    'HOSTNAME' => 'c6131d77558b',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '7.4.30',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-7.4.30.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-7.4.30.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PWD' => '/var/www/translater/projectyii',
+    'PHP_SHA256' => 'ea72a34f32c67e79ac2da7dfe96177f3c451c3eefae5810ba13312ed398ba70d',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'PHPSESSID=f62d88400dbe091e973cf8
+2022/07/14 15:35:39 [error] 31#31: *3 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=loca...', 'Antoni', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yi" while reading upstream, client: 172.23.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=php HTTP/1.1", upstream: "fastcgi://172.23.0.2:9000", host: "translater.fun"
+2022/07/14 15:35:39 [error] 31#31: *3 FastCGI sent in stderr: "i\db\Connection->getMasterPdo()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#11 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /var/www/translater/projectyii/controllers/TranController.php(27): yii\db\ActiveQuery->all()
+#16 [internal function]: app\controllers\TranController->actionShow('Php')
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#20 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Appl
+2022/07/14 15:35:39 [error] 31#31: *3 FastCGI sent in stderr: "\db\ActiveQuery->all()
+#14 [internal function]: app\controllers\TranController->actionShow('Php')
+#15 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+$_SERVER = [
+    'HOSTNAME' => 'c6131d77558b',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '7.4.30',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-7.4.30.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-7.4.30.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PWD' => '/var/www/translater/projectyii',
+    'PHP_SHA256' => 'ea72a34f32c67e79ac2da7dfe96177f3c451c3eefae5810ba13312ed398ba70d',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'PHPSESSID=i678jd85c7ni5jqdavk6mhcp9a
+2022/07/14 15:37:19 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=loca...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Conne" while reading upstream, client: 172.23.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=php HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "translater.fun"
+2022/07/14 15:37:19 [error] 30#30: *1 FastCGI sent in stderr: "ction->getMasterPdo()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#11 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /var/www/translater/projectyii/controllers/TranController.php(27): yii\db\ActiveQuery->all()
+#16 [internal function]: app\controllers\TranController->actionShow('Php')
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#20 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.ph
+2022/07/14 15:37:19 [error] 30#30: *1 FastCGI sent in stderr: "Query->all()
+#14 [internal function]: app\controllers\TranController->actionShow('Php')
+#15 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+$_SERVER = [
+    'HOSTNAME' => 'c6131d77558b',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '7.4.30',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-7.4.30.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-7.4.30.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PWD' => '/var/www/translater/projectyii',
+    'PHP_SHA256' => 'ea72a34f32c67e79ac2da7dfe96177f3c451c3eefae5810ba13312ed398ba70d',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'PHPSESSID=i678jd85c7ni5jqdavk6mhcp9a; _csrf=ff
+2022/07/14 15:37:20 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=loca...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Conne" while reading upstream, client: 172.23.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=php HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "translater.fun"
+2022/07/14 15:37:20 [error] 30#30: *1 FastCGI sent in stderr: "ction->getMasterPdo()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#11 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /var/www/translater/projectyii/controllers/TranController.php(27): yii\db\ActiveQuery->all()
+#16 [internal function]: app\controllers\TranController->actionShow('Php')
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#20 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.ph
+2022/07/14 15:37:20 [error] 30#30: *1 FastCGI sent in stderr: "Query->all()
+#14 [internal function]: app\controllers\TranController->actionShow('Php')
+#15 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+$_SERVER = [
+    'HOSTNAME' => 'c6131d77558b',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '7.4.30',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-7.4.30.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-7.4.30.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PWD' => '/var/www/translater/projectyii',
+    'PHP_SHA256' => 'ea72a34f32c67e79ac2da7dfe96177f3c451c3eefae5810ba13312ed398ba70d',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'PHPSESSID=i678jd85c7ni5jqdavk6mhcp9a; _csrf=ff
+2022/07/14 15:41:26 [error] 29#29: *2 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=127....', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#" while reading upstream, client: 172.23.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=php HTTP/1.1", upstream: "fastcgi://172.23.0.2:9000", host: "translater.fun"
+2022/07/14 15:41:26 [error] 29#29: *2 FastCGI sent in stderr: "4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#11 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /var/www/translater/projectyii/controllers/TranController.php(27): yii\db\ActiveQuery->all()
+#16 [internal function]: app\controllers\TranController->actionShow('Php')
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#20 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module
+2022/07/14 15:41:26 [error] 29#29: *2 FastCGI sent in stderr: "ction]: app\controllers\TranController->actionShow('Php')
+#15 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => Connection refused
+)
+
+$_SERVER = [
+    'HOSTNAME' => 'c6131d77558b',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '7.4.30',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-7.4.30.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-7.4.30.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PWD' => '/var/www/translater/projectyii',
+    'PHP_SHA256' => 'ea72a34f32c67e79ac2da7dfe96177f3c451c3eefae5810ba13312ed398ba70d',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'PHPSESSID=i678jd85c7ni5jqdavk6mhcp9a; _csrf=ffdf8969652a396d53d319d33bfef1d426718dd
+2022/07/14 15:41:59 [error] 29#29: *2 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=127....', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#" while reading upstream, client: 172.23.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=women HTTP/1.1", upstream: "fastcgi://172.23.0.2:9000", host: "translater.fun"
+2022/07/14 15:41:59 [error] 29#29: *2 FastCGI sent in stderr: "4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#11 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /var/www/translater/projectyii/controllers/TranController.php(27): yii\db\ActiveQuery->all()
+#16 [internal function]: app\controllers\TranController->actionShow('Women')
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#20 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Modu
+2022/07/14 15:41:59 [error] 29#29: *2 FastCGI sent in stderr: "unction]: app\controllers\TranController->actionShow('Women')
+#15 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => Connection refused
+)
+
+$_SERVER = [
+    'HOSTNAME' => 'c6131d77558b',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '7.4.30',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-7.4.30.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-7.4.30.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PWD' => '/var/www/translater/projectyii',
+    'PHP_SHA256' => 'ea72a34f32c67e79ac2da7dfe96177f3c451c3eefae5810ba13312ed398ba70d',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'PHPSESSID=i678jd85c7ni5jqdavk6mhcp9a; _csrf=ffdf8969652a396d53d319d33bfef1d4267
+2022/07/14 15:51:48 [error] 31#31: *12 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 172.23.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=women HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "translater.fun"
+2022/07/14 15:57:27 [error] 30#30: *2 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=mysq...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /var/www/translater/pr
+2022/07/14 15:57:27 [error] 30#30: *2 FastCGI sent in stderr: "))
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#11 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /var/www/translater/projectyii/controllers/TranController.php(27): yii\db\ActiveQuery->all()
+#16 [internal function]: app\controllers\TranController->actionShow('Women')
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#20 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=mysq...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/tra
+2022/07/14 15:57:27 [error] 30#30: *2 FastCGI sent in stderr: "later/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:647
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Conne" while reading upstream, client: 172.23.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=wome
+2022/07/14 16:14:55 [error] 30#30: *2 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=mysq...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /var/www/translater/pr
+2022/07/14 16:14:55 [error] 30#30: *2 FastCGI sent in stderr: "))
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#11 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /var/www/translater/projectyii/controllers/TranController.php(27): yii\db\ActiveQuery->all()
+#16 [internal function]: app\controllers\TranController->actionShow('Women')
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#20 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=mysq...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/tra
+2022/07/14 16:14:55 [error] 30#30: *2 FastCGI sent in stderr: "later/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:647
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Conne" while reading upstream, client: 172.24.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=wome
+2022/07/14 16:15:18 [error] 30#30: *9 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=mysq...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /var/www/translater/pr
+2022/07/14 16:15:18 [error] 30#30: *9 FastCGI sent in stderr: "))
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#11 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /var/www/translater/projectyii/controllers/TranController.php(27): yii\db\ActiveQuery->all()
+#16 [internal function]: app\controllers\TranController->actionShow('Women')
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#20 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=mysq...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/tra
+2022/07/14 16:15:18 [error] 30#30: *9 FastCGI sent in stderr: "later/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:647
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Conne" while reading upstream, client: 172.24.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=wome
+2022/07/14 16:27:36 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=mysq...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /var/www/translater/pr
+2022/07/14 16:27:36 [error] 30#30: *1 FastCGI sent in stderr: "eQueryBuilder()
+#11 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /var/www/translater/projectyii/controllers/TranController.php(27): yii\db\ActiveQuery->all()
+#16 [internal function]: app\controllers\TranController->actionShow('Women')
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#20 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=mysq...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/tr
+2022/07/14 16:27:36 [error] 30#30: *1 FastCGI sent in stderr: "rray)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:647
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Conne" while reading upstream, client: 172.24.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=women HTTP/1.1", upstream: "fastcgi://172.24.0.3:9000", host: "translater.fun"
+2022/07/14 16:27:40 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=mysq...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /var/www/translater/pr
+2022/07/14 16:27:40 [error] 30#30: *1 FastCGI sent in stderr: "eQueryBuilder()
+#11 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /var/www/translater/projectyii/controllers/TranController.php(27): yii\db\ActiveQuery->all()
+#16 [internal function]: app\controllers\TranController->actionShow('Women')
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#20 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=mysq...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/tr
+2022/07/14 16:27:40 [error] 30#30: *1 FastCGI sent in stderr: "rray)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:647
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Conne" while reading upstream, client: 172.24.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=women HTTP/1.1", upstream: "fastcgi://172.24.0.3:9000", host: "translater.fun"
+2022/07/14 16:31:40 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /var/www/translater/pr
+2022/07/14 16:31:40 [error] 30#30: *1 FastCGI sent in stderr: "eQueryBuilder()
+#11 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /var/www/translater/projectyii/controllers/TranController.php(27): yii\db\ActiveQuery->all()
+#16 [internal function]: app\controllers\TranController->actionShow('Women')
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#20 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/tr
+2022/07/14 16:31:40 [error] 30#30: *1 FastCGI sent in stderr: "rray)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:647
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Conne" while reading upstream, client: 172.24.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=women HTTP/1.1", upstream: "fastcgi://172.24.0.3:9000", host: "translater.fun"
+2022/07/14 16:31:41 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /var/www/translater/pr
+2022/07/14 16:31:41 [error] 30#30: *1 FastCGI sent in stderr: "eQueryBuilder()
+#11 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /var/www/translater/projectyii/controllers/TranController.php(27): yii\db\ActiveQuery->all()
+#16 [internal function]: app\controllers\TranController->actionShow('Women')
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#20 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/tr
+2022/07/14 16:31:41 [error] 30#30: *1 FastCGI sent in stderr: "rray)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:647
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Conne" while reading upstream, client: 172.24.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=women HTTP/1.1", upstream: "fastcgi://172.24.0.3:9000", host: "translater.fun"
+2022/07/14 16:31:42 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /var/www/translater/pr
+2022/07/14 16:31:42 [error] 30#30: *1 FastCGI sent in stderr: "eQueryBuilder()
+#11 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /var/www/translater/projectyii/controllers/TranController.php(27): yii\db\ActiveQuery->all()
+#16 [internal function]: app\controllers\TranController->actionShow('Women')
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#20 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/tr
+2022/07/14 16:31:42 [error] 30#30: *1 FastCGI sent in stderr: "rray)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:647
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Conne" while reading upstream, client: 172.24.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=women HTTP/1.1", upstream: "fastcgi://172.24.0.3:9000", host: "translater.fun"
+2022/07/14 16:31:42 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /var/www/translater/pr
+2022/07/14 16:31:42 [error] 30#30: *1 FastCGI sent in stderr: "eQueryBuilder()
+#11 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /var/www/translater/projectyii/controllers/TranController.php(27): yii\db\ActiveQuery->all()
+#16 [internal function]: app\controllers\TranController->actionShow('Women')
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#20 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/tr
+2022/07/14 16:31:42 [error] 30#30: *1 FastCGI sent in stderr: "rray)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:647
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Conne" while reading upstream, client: 172.24.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=women HTTP/1.1", upstream: "fastcgi://172.24.0.3:9000", host: "translater.fun"
+2022/07/14 16:38:21 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /var/www/translater/pr
+2022/07/14 16:38:21 [error] 30#30: *1 FastCGI sent in stderr: "eQueryBuilder()
+#11 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /var/www/translater/projectyii/controllers/TranController.php(27): yii\db\ActiveQuery->all()
+#16 [internal function]: app\controllers\TranController->actionShow('Women')
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#20 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/tr
+2022/07/14 16:38:21 [error] 30#30: *1 FastCGI sent in stderr: "rray)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:647
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Conne" while reading upstream, client: 172.27.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=women HTTP/1.1", upstream: "fastcgi://172.27.0.3:9000", host: "translater.fun"
+2022/07/14 16:38:26 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /var/www/translater/pr
+2022/07/14 16:38:26 [error] 30#30: *1 FastCGI sent in stderr: "eQueryBuilder()
+#11 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /var/www/translater/projectyii/controllers/TranController.php(27): yii\db\ActiveQuery->all()
+#16 [internal function]: app\controllers\TranController->actionShow('Women')
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#20 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/tr
+2022/07/14 16:38:26 [error] 30#30: *1 FastCGI sent in stderr: "rray)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:647
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Conne" while reading upstream, client: 172.27.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=women HTTP/1.1", upstream: "fastcgi://172.27.0.3:9000", host: "translater.fun"
+2022/07/14 17:38:51 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /var/www/translater/pr
+2022/07/14 17:38:51 [error] 30#30: *1 FastCGI sent in stderr: "))
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#11 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /var/www/translater/projectyii/controllers/TranController.php(27): yii\db\ActiveQuery->all()
+#16 [internal function]: app\controllers\TranController->actionShow('Women')
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#20 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/tra
+2022/07/14 17:38:51 [error] 30#30: *1 FastCGI sent in stderr: "later/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:647
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Conne" while reading upstream, client: 172.28.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=wome
+2022/07/14 17:49:06 [error] 29#29: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /var/www/translater/pr
+2022/07/14 17:49:06 [error] 29#29: *1 FastCGI sent in stderr: "))
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#11 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /var/www/translater/projectyii/controllers/TranController.php(27): yii\db\ActiveQuery->all()
+#16 [internal function]: app\controllers\TranController->actionShow('Women')
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#20 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/tra
+2022/07/14 17:49:06 [error] 29#29: *1 FastCGI sent in stderr: "later/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:647
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Conne" while reading upstream, client: 172.30.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=wome
+2022/07/14 17:49:07 [error] 29#29: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /var/www/translater/pr
+2022/07/14 17:49:07 [error] 29#29: *1 FastCGI sent in stderr: "))
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#11 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /var/www/translater/projectyii/controllers/TranController.php(27): yii\db\ActiveQuery->all()
+#16 [internal function]: app\controllers\TranController->actionShow('Women')
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#20 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/tra
+2022/07/14 17:49:07 [error] 29#29: *1 FastCGI sent in stderr: "later/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:647
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Conne" while reading upstream, client: 172.30.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=wome
+2022/07/14 17:49:07 [error] 29#29: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /var/www/translater/pr
+2022/07/14 17:49:07 [error] 29#29: *1 FastCGI sent in stderr: "))
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#11 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /var/www/translater/projectyii/controllers/TranController.php(27): yii\db\ActiveQuery->all()
+#16 [internal function]: app\controllers\TranController->actionShow('Women')
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#20 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/tra
+2022/07/14 17:49:07 [error] 29#29: *1 FastCGI sent in stderr: "later/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:647
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Conne" while reading upstream, client: 172.30.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=wome
+2022/07/14 17:49:07 [error] 29#29: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /var/www/translater/pr
+2022/07/14 17:49:07 [error] 29#29: *1 FastCGI sent in stderr: "))
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#11 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /var/www/translater/projectyii/controllers/TranController.php(27): yii\db\ActiveQuery->all()
+#16 [internal function]: app\controllers\TranController->actionShow('Women')
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#20 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/tra
+2022/07/14 17:49:07 [error] 29#29: *1 FastCGI sent in stderr: "later/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:647
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Conne" while reading upstream, client: 172.30.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=wome
+2022/07/14 17:49:07 [error] 29#29: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /var/www/translater/pr
+2022/07/14 17:49:07 [error] 29#29: *1 FastCGI sent in stderr: "))
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#11 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /var/www/translater/projectyii/controllers/TranController.php(27): yii\db\ActiveQuery->all()
+#16 [internal function]: app\controllers\TranController->actionShow('Women')
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#20 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/tra
+2022/07/14 17:49:07 [error] 29#29: *1 FastCGI sent in stderr: "later/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:647
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Conne" while reading upstream, client: 172.30.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=wome
+2022/07/14 17:49:08 [error] 29#29: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /var/www/translater/pr
+2022/07/14 17:49:08 [error] 29#29: *1 FastCGI sent in stderr: "))
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#11 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /var/www/translater/projectyii/controllers/TranController.php(27): yii\db\ActiveQuery->all()
+#16 [internal function]: app\controllers\TranController->actionShow('Women')
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#20 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/tra
+2022/07/14 17:49:08 [error] 29#29: *1 FastCGI sent in stderr: "later/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:647
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Conne" while reading upstream, client: 172.30.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=wome
+2022/07/14 18:06:10 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=mysq...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#" while reading upstream, client: 172.31.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=women HTTP/1.1", upstream: "fastcgi://172.31.0.4:9000", host: "translater.fun"
+2022/07/14 18:06:10 [error] 30#30: *1 FastCGI sent in stderr: "4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#11 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /var/www/translater/projectyii/controllers/TranController.php(27): yii\db\ActiveQuery->all()
+#16 [internal function]: app\controllers\TranController->actionShow('Women')
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#20 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Modu
+2022/07/14 18:06:10 [error] 30#30: *1 FastCGI sent in stderr: "unction]: app\controllers\TranController->actionShow('Women')
+#15 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => Connection refused
+)
+
+$_SERVER = [
+    'HOSTNAME' => '5f2c011a00e4',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '7.4.30',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-7.4.30.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-7.4.30.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PWD' => '/var/www/translater/projectyii',
+    'PHP_SHA256' => 'ea72a34f32c67e79ac2da7dfe96177f3c451c3eefae5810ba13312ed398ba70d',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'PHPSESSID=75949ddc4f75c43ebd8c38d627d60807; _csrf=a07010f8beed6eead79d3d3d1387f
+2022/07/14 18:07:14 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=mysq...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /var/www/translater/pr
+2022/07/14 18:07:14 [error] 30#30: *1 FastCGI sent in stderr: "))
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#11 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /var/www/translater/projectyii/controllers/TranController.php(27): yii\db\ActiveQuery->all()
+#16 [internal function]: app\controllers\TranController->actionShow('Women')
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#20 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=mysq...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/tra
+2022/07/14 18:07:14 [error] 30#30: *1 FastCGI sent in stderr: "later/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:647
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Conne" while reading upstream, client: 172.31.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=wome
+2022/07/14 18:07:16 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 39. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=mysq...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /var/www/translater/pr
+2022/07/14 18:07:16 [error] 30#30: *1 FastCGI sent in stderr: "))
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#11 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /var/www/translater/projectyii/controllers/TranController.php(27): yii\db\ActiveQuery->all()
+#16 [internal function]: app\controllers\TranController->actionShow('Women')
+#17 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#20 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=mysq...', 'root', 'Golang13112!', NULL)
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /var/www/tra
+2022/07/14 18:07:16 [error] 30#30: *1 FastCGI sent in stderr: "later/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#21 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php:647
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1066): yii\db\Connection->open()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#10 /var/www/translater/projectyii/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Conne" while reading upstream, client: 172.31.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=wome
+2022/07/15 09:18:30 [error] 32#32: *2 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 47. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+yii\db\Exception: Failed to open redis DB connection (tcp://localhost:6379, database=0): 99 - Cannot assign requested address in /var/www/translater/projectyii/vendor/yiisoft/yii2-redis/src/Connection.php:658
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2-redis/src/Connection.php(759): yii\redis\Connection->open()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2-redis/src/Connection.php(724): yii\redis\Connection->executeCommand('EXISTS', Array)
+#2 /var/www/translater/projectyii/models/Redis.php(17): yii\redis\Connection->__call('exists', Array)
+#3 /var/www/translater/projectyii/controllers/TranController.php(23): app\models\Redis::cheakVal('Appledssd')
+#4 [internal function]: app\controlle" while reading upstream, client: 172.31.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=appledssd HTTP/1.1", upstream: "fastcgi://172.31.0.2:9000", host: "translater.fun"
+2022/07/15 09:18:30 [error] 32#32: *2 FastCGI sent in stderr: "rs\TranController->actionShow('Appledssd')
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#11 {main}
+Additional Information:
+Cannot assign requested address
+$_SERVER = [
+    'HOSTNAME' => '5f2c011a00e4',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '7.4.30',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-7.4.30.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-7.4.30.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PWD' => '/var/www/translater/projectyii',
+    'PHP_SHA256' => 'ea72a34f32c67e79ac2da7dfe96177f3c451c3eefae5810ba13312ed398ba70d',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'PHPSESSID=i678jd85c7ni5jqdavk6mhcp9a; _csrf=ffdf8969652a396d53d319d33bfef1d426718dd584ed099f8026137252298e15a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%2
+2022/07/15 10:04:11 [error] 33#33: *5 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/translater/projectyii/controllers/TranController.php on line 47. in /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#4 {main}
+Previous exception:
+yii\db\Exception: Failed to open redis DB connection (tcp://localhost:6379, database=0): 99 - Cannot assign requested address in /var/www/translater/projectyii/vendor/yiisoft/yii2-redis/src/Connection.php:658
+Stack trace:
+#0 /var/www/translater/projectyii/vendor/yiisoft/yii2-redis/src/Connection.php(759): yii\redis\Connection->open()
+#1 /var/www/translater/projectyii/vendor/yiisoft/yii2-redis/src/Connection.php(724): yii\redis\Connection->executeCommand('EXISTS', Array)
+#2 /var/www/translater/projectyii/models/Redis.php(17): yii\redis\Connection->__call('exists', Array)
+#3 /var/www/translater/projectyii/controllers/TranController.php(23): app\models\Redis::cheakVal('Appledssd')
+#4 [internal function]: app\controlle" while reading upstream, client: 172.31.0.1, server: translater.fun, request: "GET /index.php?r=tran/show&word=appledssd HTTP/1.1", upstream: "fastcgi://172.31.0.2:9000", host: "translater.fun"
+2022/07/15 10:04:11 [error] 33#33: *5 FastCGI sent in stderr: "rs\TranController->actionShow('Appledssd')
+#5 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#7 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('show', Array)
+#8 /var/www/translater/projectyii/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('tran/show', Array)
+#9 /var/www/translater/projectyii/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/translater/projectyii/web/index.php(12): yii\base\Application->run()
+#11 {main}
+Additional Information:
+Cannot assign requested address
+$_SERVER = [
+    'HOSTNAME' => '5f2c011a00e4',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '7.4.30',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-7.4.30.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-7.4.30.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PWD' => '/var/www/translater/projectyii',
+    'PHP_SHA256' => 'ea72a34f32c67e79ac2da7dfe96177f3c451c3eefae5810ba13312ed398ba70d',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'PHPSESSID=i678jd85c7ni5jqdavk6mhcp9a; _csrf=ffdf8969652a396d53d319d33bfef1d426718dd584ed099f8026137252298e15a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%2

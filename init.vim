@@ -1,0 +1,1 @@
+/home/antoni/.config/nvim/init.vim
