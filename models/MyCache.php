@@ -5,6 +5,7 @@ namespace app\models;
 use yii\redis\Cache;
 
 class MyCache extends Cache{
+
     public function setValue($key, $value, $expire)
     {
         if ($expire == 0) {
@@ -20,12 +21,10 @@ class MyCache extends Cache{
     {
         $value = $this->getReplica()->executeCommand('GET', [$key]);
         if ($value === null) {
-            return false; // Key is not in the cache or expired
+            return false; 
         }
-
         return $value;
     }
-
 
 public function hset($hkey,$data)
 {
@@ -39,12 +38,12 @@ public function hset($hkey,$data)
 public function hget($hkey)
 {
     $keys=$this->redis->executeCommand('hkeys',["$hkey"]);
-    $json_arr=[];
+    $jsonArr=[];
     foreach ($keys as $key)
     {
-        $json_arr[$key]=$this->redis->executeCommand('hget',["$hkey","$key"]);
+        $jsonArr[$key]=$this->redis->executeCommand('hget',["$hkey","$key"]);
     }
-    return $json_arr;
+    return $jsonArr;
 }
 
 }

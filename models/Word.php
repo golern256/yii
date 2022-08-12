@@ -4,18 +4,18 @@ namespace app\models;
 
 class Word 
 {
-    private $content = [];
+    private $content;
     const RU ='ru_word';
     const EN = 'en_word';
 
     function __construct($sourceArticle)
     {
-       $inputLine =  preg_replace('/\s+/', ' ',$sourceArticle["sourceWord"]);
-       $this->content=$this->prepareArticle(explode(" ", $inputLine));
+       $clearSourceLine =  preg_replace('/\s+/', ' ',$sourceArticle["sourceLine"]);
+       $this->content=$this->prepareArticle(explode(" ", $clearSourceLine));
 
     }
 
-   public function getContent(){
+   public function getSourceLine(){
 
         return $this->content;
     }
@@ -23,19 +23,20 @@ class Word
    private function prepareArticle($article)
     {   
         $code_match = array('-', '"', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+', '{', '}', '|', ':', '"', '<', '>', '?', '[', ']', ';', "'", ',', '.', '/', '', '~', '`', '=');
-        $article_res =[];
+        $clearArticle =[];
         foreach($article as $key => $word)
         {   
             $word = trim($word);
-            $article_res[$key] = str_replace($code_match,'', $word);
+            $clearArticle[$key] = str_replace($code_match,'', $word);
         }
 
-    return  $article_res;
+    return  $clearArticle;
     }
 
 }
-   
-      function rucfirst($str, $e='utf-8'){                                                                                                                                                            
+
+
+   function rucfirst($str, $e='utf-8'){                                                                                                                                                            
    $fc = mb_strtoupper(mb_substr($str, 0, 1, $e), $e);
    return $fc.mb_substr($str, 1, mb_strlen($str, $e), $e);
 }

@@ -6,8 +6,8 @@ use yii\web\Response;
 use yii\web\Request;
 use app\models\MyCache;
 use app\models\Word;
+use yii\web\HttpException;
 use Yii;
-
 
 class WordController extends Controller
 {
@@ -15,29 +15,30 @@ class WordController extends Controller
 
         $request = new Request();
         $sourceArticle=$request->get();
+        if((key($sourceArticle)!="sourceLine"))
+            throw new HttpException(400);
         $requestURL=$request->absoluteUrl;
         $redis= new MyCache();
-        $key =$redis->buildKey($requestURL);
-        if($redis->exists($key))
+        $keyForRequest =$redis->buildKey($requestURL);
+        if($redis->exists($keyForRequest))
             {
                 $response = Yii::$app->response;
                 $response->format = Response::FORMAT_JSON;
-                $response->data = $redis->hget($key);
+                $response->data = $redis->hget($keyForRequest);
                 return;
             }
         $sourceArticle = new Word($sourceArticle);
         $translater = new Translater();
-        $finalContent = $translater->Translate($sourceArticle);
-        $this->getResponce($finalContent,$key,$redis);
+        $finalTranslatedLine = $translater->Translate($sourceArticle);
+        $this->getResponce($finalTranslatedLine,$keyForRequest,$redis);
     }
 
-    public function getResponce($finalContent,$key,$redis){
+    public function getResponce($finalTranslatedLine,$keyForRequest,$redis){
 
         $response = Yii::$app->response;
-        print_r($finalContent);
         $response->format = Response::FORMAT_JSON;
-        $response->data = $finalContent;
-        $redis->hset($key,$finalContent);  
+        $response->data = $finalTranslatedLine;
+        $redis->hset($keyForRequest,$finalTranslatedLine);  
     }
 
     public function actionError()
