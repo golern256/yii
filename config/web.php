@@ -15,7 +15,7 @@ $config = [
     'components' => [
         'redis' => [
             'class' => 'yii\redis\Connection',
-            'hostname' => 'localhost',
+            'hostname' => 'redis',
             'port' => 6379,
             'database' => 0,
         ],
